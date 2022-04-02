@@ -1,60 +1,14 @@
-<style type="text/css">
-* {
-    margin: 0;
-    padding: 0;
-}
-body {
-    background: #eee;
-    display: flex;
-    height: 100%;
-    overflow: hidden;
-    width: 100%;
-}
-.box {
-    background: white;
-    border: .1em solid #ccc;
-    border-radius: .5em;
-    padding: 1em;
-    position: absolute;
-}
-.box:active {
-    border-color: cyan;
-    box-shadow: 0 .2em .5em rgba(0,0,0,.2);
-}
-.box:hover {
-    cursor: pointer;
-}
-</style>
-
-<div class="box">Box 1</div>
-<div class="box">Box 2</div>
-<div class="box">Box 3</div>
-<div class="box">Box 4</div>
-
+<script src="modules/flow-node.js"></script>
 <script>
-let draggingBox = null;
-let initialX = 0;
-let initialY = 0;
-
-Array.from(document.querySelectorAll('.box')).forEach(box =>
-    box.addEventListener('mousedown', event => {
-        event.preventDefault();
-        draggingBox = event.target;
-        initialX = event.clientX - draggingBox.getBoundingClientRect().x;
-        initialY = event.clientY - draggingBox.getBoundingClientRect().y;
-        
-    }));
-document.addEventListener('mousemove', event => {
-    event.preventDefault();
-    if (draggingBox !== null) {
-        const currentX = event.clientX - initialX;
-        const currentY = event.clientY - initialY;
-
-        draggingBox.style.transform = 'translate3d('+currentX+'px, '+currentY+'px, 0)';
-    }
-});
-document.addEventListener('mouseup', event => {
-    event.preventDefault();
-    draggingBox = null;
-});
+customElements.define('flow-node', FlowNode);
 </script>
+
+<flow-node title="First block"></flow-node>
+
+<flow-node title="Second block">
+    With body
+</flow-node>
+
+<flow-node>
+    Without title
+</flow-node>
