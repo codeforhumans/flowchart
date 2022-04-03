@@ -1,14 +1,20 @@
+<script src="modules/flow-chart.js"></script>
 <script src="modules/flow-node.js"></script>
 <script>
-customElements.define('flow-node', FlowNode);
+    customElements.define('flow-chart', FlowChart);
+    customElements.define('flow-node', FlowNode);
 </script>
 
-<flow-node title="First block"></flow-node>
+<flow-chart height="200">
 
-<flow-node title="Second block">
-    With body
-</flow-node>
-
-<flow-node>
-    Without title
-</flow-node>
+    <flow-node title="First block"></flow-node>
+    
+    <flow-node title="Second block">
+        With body
+    </flow-node>
+    
+    <flow-node>
+        Without title
+    </flow-node>
+    
+</flow-chart>

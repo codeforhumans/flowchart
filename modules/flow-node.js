@@ -11,24 +11,30 @@ class FlowNode extends HTMLElement {
         this.shadow = this.attachShadow({mode: 'open'});
         this.shadow.innerHTML = `
             <style>
-            :host h4 {
-                margin: 0;
-                padding: 0;
-            }
             :host {
                 background: #fff;
-                border: .1em solid #ddd;
-                border-radius: .3em;
-                padding: 1em;
+                border: 2px solid #fff;
+                border-radius: 5px;
+                box-shadow: 0 2px 5px #eee;
                 position: absolute;
             }
             :host(:active) {
-                border-color: #09f;
-                box-shadow: 0 .2em .5em rgba(0,0,0,.2);
+                border-color: #217CE8;
+                box-shadow: 0 .3em .6em rgba(0,0,0,.2);
                 cursor: grabbing !important;
             }
             :host(:hover) {
+                box-shadow: 0 2px 5px #ddd;
                 cursor: grab;
+            }
+            :host h4 {
+                border-bottom: 1px solid #ddd;
+                margin: 0;
+                padding: .5em;
+            }
+            :host slot {
+                display: block;
+                padding: .5em;
             }
             </style>
             <slot></slot>
