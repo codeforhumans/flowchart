@@ -1,11 +1,11 @@
-<script src="modules/flow-chart.js"></script>
-<script src="modules/flow-node.js"></script>
-<script>
-    customElements.define('flow-chart', FlowChart);
-    customElements.define('flow-node', FlowNode);
-</script>
+<script src="modules/flow-chart.js" defer></script>
+<script src="modules/flow-node.js" defer></script>
 
-<flow-chart height="200">
+<style>
+    * { margin: 0; padding: 0; }
+</style>
+
+<flow-chart height="500">
 
     <flow-node title="First block"></flow-node>
     

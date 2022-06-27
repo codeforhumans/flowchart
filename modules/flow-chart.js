@@ -12,6 +12,7 @@ class FlowChart extends HTMLElement {
                     linear-gradient(#fbfbfb 20px, transparent 0) center,
                     #ddd;
                 background-size: 22px 22px;
+                border: 1px solid #ccc;
                 display: flex;
                 margin: 0;
                 overflow: hidden;
@@ -28,3 +29,5 @@ class FlowChart extends HTMLElement {
         this.style.height = this.getAttribute('height');
     }
 }
+
+customElements.define('flow-chart', FlowChart);

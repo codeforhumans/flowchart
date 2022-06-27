@@ -13,7 +13,7 @@ class FlowNode extends HTMLElement {
             <style>
             :host {
                 background: #fff;
-                border: 2px solid #fff;
+                border: 3px solid #ddd;
                 border-radius: 5px;
                 box-shadow: 0 2px 5px #eee;
                 position: absolute;
@@ -22,6 +22,7 @@ class FlowNode extends HTMLElement {
                 border-color: #217CE8;
                 box-shadow: 0 .3em .6em rgba(0,0,0,.2);
                 cursor: grabbing !important;
+                z-index: 1000;
             }
             :host(:hover) {
                 box-shadow: 0 2px 5px #ddd;
@@ -72,3 +73,5 @@ class FlowNode extends HTMLElement {
         }
     }
 }
+
+customElements.define('flow-node', FlowNode);
