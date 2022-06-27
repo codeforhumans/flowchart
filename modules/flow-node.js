@@ -13,13 +13,13 @@ class FlowNode extends HTMLElement {
             <style>
             :host {
                 background: #fff;
-                border: 3px solid #ddd;
+                border: 3px solid #fff;
                 border-radius: 5px;
                 box-shadow: 0 2px 5px #eee;
                 position: absolute;
             }
             :host(:active) {
-                border-color: #217CE8;
+                border-color: #0af;
                 box-shadow: 0 .3em .6em rgba(0,0,0,.2);
                 cursor: grabbing !important;
                 z-index: 1000;

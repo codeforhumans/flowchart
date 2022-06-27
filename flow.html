@@ -5,16 +5,19 @@
     * { margin: 0; padding: 0; }
 </style>
 
-<flow-chart height="500">
+<flow-chart height="500"></flow-chart>
 
-    <flow-node title="First block"></flow-node>
-    
-    <flow-node title="Second block">
-        With body
-    </flow-node>
-    
-    <flow-node>
-        Without title
-    </flow-node>
-    
-</flow-chart>
+<script>
+    const chart = document.querySelector('flow-chart');
+
+    const node1 = document.createElement('flow-node');
+    node1.setAttribute('title', 'First node');
+
+    const node2 = document.createElement('flow-node');
+    node2.setAttribute('title', 'Second node');
+
+    const node3 = document.createElement('flow-node');
+    node3.setAttribute('title', 'Third node');
+
+    chart.append(node1, node2, node3);
+</script>

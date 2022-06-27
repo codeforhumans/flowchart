@@ -12,7 +12,7 @@ class FlowChart extends HTMLElement {
                     linear-gradient(#fbfbfb 20px, transparent 0) center,
                     #ddd;
                 background-size: 22px 22px;
-                border: 1px solid #ccc;
+                border: 1px solid #ddd;
                 display: flex;
                 margin: 0;
                 overflow: hidden;
