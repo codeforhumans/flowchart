@@ -1,5 +1,6 @@
 <script src="modules/flow-chart.js" defer></script>
 <script src="modules/flow-node.js" defer></script>
+<script src="modules/flow-node-connection.js" defer></script>
 
 <style>
     * { margin: 0; padding: 0; }
@@ -16,8 +17,7 @@
     const node2 = document.createElement('flow-node');
     node2.setAttribute('title', 'Second node');
 
-    const node3 = document.createElement('flow-node');
-    node3.setAttribute('title', 'Third node');
+    const con1 = document.createElement('flow-node-connection');
 
-    chart.append(node1, node2, node3);
+    chart.append(node1, node2, con1);
 </script>

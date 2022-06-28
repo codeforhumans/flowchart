@@ -41,6 +41,8 @@ class FlowNode extends HTMLElement {
             <slot></slot>
         `;
 
+        this.setAttribute('id', Math.floor(Math.random() * 1000000));
+
         this.addEventListener('mousedown', this.startDrag);
         this.addEventListener('mouseup', this.stopDrag);
         this.parentNode.addEventListener('mousemove', this.drag.bind(this));
@@ -66,11 +68,13 @@ class FlowNode extends HTMLElement {
     }
 
     drag(event) {
-        if (this.dragging) {
-            const currentX = event.clientX - this.left;
-            const currentY = event.clientY - this.top;
-            this.style.transform = 'translate3d('+currentX+'px, '+currentY+'px, 0)';
+        if (! this.dragging) {
+            return;
         }
+
+        const currentX = event.clientX - this.left;
+        const currentY = event.clientY - this.top;
+        this.style.transform = 'translate3d('+currentX+'px, '+currentY+'px, 0)';
     }
 }
 

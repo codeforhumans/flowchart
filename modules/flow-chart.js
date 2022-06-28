@@ -19,6 +19,7 @@ class FlowChart extends HTMLElement {
                 padding: 0;
                 position: relative;
                 user-select: none;
+                width: 100%;
             }
             </style>
             <slot></slot>
