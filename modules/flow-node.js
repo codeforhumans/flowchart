@@ -43,7 +43,7 @@ class FlowNode extends HTMLElement {
 
         this.addEventListener('mousedown', this.startDrag);
         this.addEventListener('mouseup', this.stopDrag);
-        this.addEventListener('mousemove', this.drag);
+        this.parentNode.addEventListener('mousemove', this.drag.bind(this));
 
     }
 
